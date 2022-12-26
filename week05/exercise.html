@@ -12,149 +12,125 @@
     />
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <form>
-      <div class="row mb-3">
-        <div class="col-lg-6">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+    <form class="container-fluid">
+      <label for="basic-url" class="form-label">คณะ/สาขาที่ต้องการสมัคร</label>
+      <div class="row mb-3 col-md-6">
+            <select class="form-select" aria-label="Default select example">
+            <option selected>เลือก...</option>
+            <option value="1">
+              คณะวิทยาศาสตร์และเทคโนโลยี-วิทยาการคอมพิวเตอร์
+            </option>
+            <option value="2">
+              คณะวิทยาศาสตร์และเทคโนโลยี-นวัตกรรมอาหารและเครื่องดื่มเพื่อสุขภาพ
+            </option>
+            <option value="3">
+              คณะวิทยาศาสตร์และเทคโนโลยี-เทคโนโลยีสารสนเทศ
+            </option>
           </select>
         </div>
-      </div>
+      
 
       <!---->
-      <div class="row mb-3">
-        <div class="col-lg-3">
+      <div class="row mb-3 container-fluid">
+        <div class="col-md-1">
+          <label for="basic-url" class="form-label"
+            >สัญชาติ<span class="text-danger">*</span></label
+          >
           <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select 1</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected>เลือก...</option>
+            <option value="1">ศาสนาพุท</option>
+            <option value="2">ศาสนาอิสลาม</option>
+            <option value="3">ศาสนาฮินดู</option>
           </select>
         </div>
-        <div class="col-lg-3">
+        <div class="col-md-1 row mb-3">
+          <label for="basic-url" class="form-label"
+            >เพศ<span class="text-danger">*</span></label>
           <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select 2</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-      </div>
-
-      <!---->
-      <div class="row mb-3">
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="De1"
-            aria-label="default1"
-          />
-        </div>
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="De2"
-            aria-label="default2"
-          />
-        </div>
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="De3"
-            aria-label="default3"
-          />
-        </div>
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="De4"
-            aria-label="default4"
-          />
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Defa5"
-            aria-label="default5"
-          />
-        </div>
-
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Defa6"
-            aria-label="default6"
-          />
-        </div>
-
-        <div class="col-lg-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Defa7"
-            aria-label="default7"
-          />
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-lg-3">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select 1</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected>เลือก...</option>
+            <option value="1">ชาย</option>
+            <option value="2">หญิง</option>
           </select>
         </div>
 
-        <div class="col-lg-6">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Text8"
-            aria-label="default8"
-          />
-        </div>
-
-        <div class="col-lg-3">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select 100</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-
-        <div class="row mb-3">
-          <div class="col-lg-3">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="text55"
-              aria-label="default1"
-            />
+        <div class="col-md-2">
+          <label for="validationCustom01" class="form-label">คำนำหน้าชื่อ <span class="text-danger">*(ชื่อเต็ม)</span></label>
+          <input type="text" class="form-control" id="validationCustom01" value="พิมพ์" required="">
+          <div class="valid-feedback">           
           </div>
+        </div>
 
-          <div class="col-lg-3">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="text66"
-              aria-label="default2"
-            />
+        <div class="col-md-2">
+          <label for="validationCustom02" class="form-label">นามสกุล <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="validationCustom02" value="พิมพ์" required="">
+          <div class="valid-feedback">           
+          </div>
+        </div>
+        
+        <div class="col-md-2">
+          <label for="validationCustom03" class="form-label">บัตรประชาชน</label>
+          <input type="text" class="form-control" id="validationCustom03" required="">
+          <div class="invalid-feedback">            
+          </div>
+        </div>
+
+        <div class="row">
+        <div class="row mb-3 col-md-3">
+          <label for="validationCustom03" class="form-label">เบอร์โทรศัพท์</label>
+          <input type="text" class="form-control" id="validationCustom03" required="">
+          <div class="invalid-feedback">            
+          </div>
+        </div>
+        
+
+       <div class="col-md-3">
+          <label for="validationCustom03" class="form-label">line(ถ้ามี)</label>
+          <input type="text" class="form-control" id="validationCustom03" required="">
+          <div class="invalid-feedback">            
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom03" class="form-label">facebook(ถ้ามี)</label>
+          <input type="text" class="form-control" id="validationCustom03" required="">
+          <div class="invalid-feedback">            
+          </div>
+        </div>
+
+
+        <div class="row mb-3 col-md-3">        
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required="">
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required="">
+            <option selected="" disabled="" value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
           </div>
         </div>
       </div>
