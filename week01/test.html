@@ -261,18 +261,6 @@
           </div>
         </div>
       </div>
-      
-      
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom03" class="form-label">City</label>
-        <input type="text" class="form-control" id="validationCustom03" required>
-        <div class="invalid-feedback">
-          Please provide a valid city.
-        </div>
-      </div>
-
-
-
 
       <!--****************************************************************************-->
       <div class="row">
@@ -287,25 +275,25 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     >
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
+              // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
 
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
     </script>
   </body>
 </html>
