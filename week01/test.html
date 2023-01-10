@@ -1,368 +1,282 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
     />
+    <link
+      href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body>
-    <!-- As a heading -->
-    <nav class="navbar bg-body-tertiary container">
+  <body class="p-3 m-0 border-0 bd-example">
+    <!-- Example Code -->
+
+    <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">กรอกประวัติ</span>
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
       </div>
     </nav>
-    <!-- As a heading -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>ประกาศ!!!</strong> ร้านจะหยุดทำชั่วคราวในวันที่ 31 ธ.ค. - 7 ม.ค.
+      สวัสดีปีใหม่
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
 
-<form name="form1" method="POST" action="/Webregister/pages/index_insert_nm.php" enctype="multipart/form-data" onSubmit="JavaScript:return fncSubmit();"> 
-  <div class="form-input clear">
-    <label class="one_half first" >คณะ / สาขาที่ต้องการสมัคร<span style="color: red"> *</span><br>
-      <select name="branch_insert" type="VARCHAR" id="branch_insert" class="test" onchange="showHintn(this.value)">
-        <option value="">เลือก...</option>
-                      <option value="15311000001">
-        คณะครุศาสตร์  | สาขาการศึกษาปฐมวัย (ค.บ.)              </option>
-                      <option value="15311000002">
-        คณะครุศาสตร์  | สาขาคณิตศาสตร์ (ค.บ.)              </option>
-                      <option value="15311000005">
-        คณะครุศาสตร์  | สาขาภาษาอังกฤษ (ค.บ.)              </option>
-                      <option value="15311000006">
-        คณะครุศาสตร์  | สาขาภาษาจีน (ค.บ.)              </option>
-                      <option value="15311000007">
-        คณะครุศาสตร์  | สาขาภาษาไทย (ค.บ.)              </option>
-                      <option value="15311000010">
-        คณะครุศาสตร์  | สาขาการประถมศึกษา (ค.บ.)              </option>
-                      <option value="15311000011">
-        คณะครุศาสตร์  | สาขาภาษาอังกฤษ (หลักสูตรภาษาอังกฤษ) (ค.บ.)              </option>
-                      <option value="15311000012">
-        คณะครุศาสตร์ | สาขาวิทยาศาสตร์ (ค.บ.)              </option>
-                      <option value="15312000002">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขาจิตวิทยา (ศศ.บ.)              </option>
-                      <option value="15312000005">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขานิติศาสตร์ (น.บ.)              </option>
-                      <option value="15312000006">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขาทัศนศิลป์ (ศป.บ.)              </option>
-                      <option value="15312000007">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขาภาษาไทย (ศศ.บ.)              </option>
-                      <option value="15312000008">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขาภาษาอังกฤษ (ศศ.บ.)              </option>
-                      <option value="15312000009">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขารัฐประศาสนศาสตร์ (รป.บ.)              </option>
-                      <option value="15312000015">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขารัฐศาสตร์ (ร.บ.)              </option>
-                      <option value="15312000016">
-        คณะมนุษยศาสตร์และสังคมศาสตร์  | สาขาภาษาอังกฤษธุรกิจ(ศศ.บ.)              </option>
-                      <option value="15312000017">
-        คณะมนุษยศาสตร์และสังคมศาสตร์ | สาขาสังคมศึกษา (ค.บ.)              </option>
-                      <option value="15312000018">
-        คณะมนุษยศาสตร์และสังคมศาสตร์ | สาขาดนตรีศึกษา (ค.บ.)              </option>
-                      <option value="15312000019">
-        คณะมนุษยศาสตร์และสังคมศาสตร์ | สาขานาฏศิลป์ศึกษา (ค.บ.)              </option>
-                      <option value="15312000020">
-        คณะมนุษยศาสตร์และสังคมศาสตร์ | สาขาบรรณารักษศาสตร์และสารสนเทศศาสตร์ (ค.บ.)              </option>
-                      <option value="15313000001">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาคหกรรมศาสตร์ (วท.บ.)              </option>
-                      <option value="15313000002">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขานวัตกรรมชีวผลิตภัณฑ์ (วท.บ.)              </option>
-                      <option value="15313000003">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาเทคโนโลยีสารสนเทศ กลุ่มวิชาเทคโนโลยีดิจิทัล (วท.บ.)              </option>
-                      <option value="15313000004">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาเทคโนโลยีสารสนเทศ กลุ่มวิชาแอนิเมชันและดิจิทัลมีเดีย (วท.บ.)              </option>
-                      <option value="15313000005">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาวิทยาการคอมพิวเตอร์ (วท.บ.)              </option>
-                      <option value="15313000006">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาอาชีวอนามัยและความปลอดภัย (วท.บ.)              </option>
-                      <option value="15313000007">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาวิทยาศาสตร์และเทคโนโลยีสิ่งแวดล้อม (วท.บ.)              </option>
-                      <option value="15313000010">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาโภชนาการและการกำหนดอาหาร (วท.บ.)              </option>
-                      <option value="15313000014">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขาการจัดการสาธารณภัย (วท.บ.)              </option>
-                      <option value="15313000016">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขานวัตกรรมดิจิทัลและวิศวกรรมซอฟต์แวร์ (วท.บ.)              </option>
-                      <option value="15313000018">
-        คณะวิทยาศาสตร์และเทคโนโลยี  | สาขานวัตกรรมอาหารและเครื่องดื่มเพื่อสุขภาพ (วท.บ.)              </option>
-                      <option value="15314000001">
-        คณะเทคโนโลยีการเกษตร | สาขาเกษตรศาสตร์ กลุ่มวิชาเทคโนโลยีการผลิตพืช (วท.บ.)              </option>
-                      <option value="15314000002">
-        คณะเทคโนโลยีการเกษตร | สาขาเกษตรศาสตร์ กลุ่มวิชาสัตวศาสตร์ (วท.บ.)              </option>
-                      <option value="15314000003">
-        คณะเทคโนโลยีการเกษตร | สาขาวิทยาศาสตร์และเทคโนโลยีการอาหาร (วท.บ.)              </option>
-                      <option value="15314000004">
-        คณะเทคโนโลยีการเกษตร | สาขาเทคโนโลยีภูมิทัศน์ (วท.บ.)              </option>
-                      <option value="15315000001">
-        คณะเทคโนโลยีอุตสาหกรรม | สาขาเทคโนโลยีไฟฟ้าอุตสาหกรรม(ต่อเนื่อง) (อส.บ.)              </option>
-                      <option value="15315000002">
-        คณะเทคโนโลยีอุตสาหกรรม | สาขาวิศวกรรมการจัดการ (วศ.บ.)              </option>
-                      <option value="15315000004">
-        คณะเทคโนโลยีอุตสาหกรรม | สาขาเทคโนโลยีวิศวกรรมเครื่องกล (วศ.บ.)              </option>
-                      <option value="15315000005">
-        คณะเทคโนโลยีอุตสาหกรรม | สาขาเทคโนโลยีวิศวกรรมโยธา (วศ.บ.)              </option>
-                      <option value="15315000006">
-        คณะเทคโนโลยีอุตสาหกรรม | สาขาวิศวกรรมเมคคาทรอนิกส์และหุ่นยนต์ (วศ.บ.)              </option>
-                      <option value="15315000007">
-        คณะเทคโนโลยีอุตสาหกรรม | สาขาสาขาวิชาออกแบบอุตสาหกรรม (อส.บ.)              </option>
-                      <option value="15316000001">
-        คณะวิทยาการจัดการ | สาขาการจัดการท่องเที่ยว (ศศ.บ.)              </option>
-                      <option value="15316000002">
-        คณะวิทยาการจัดการ | สาขาการจัดการทั่วไป (บธ.บ)              </option>
-                      <option value="15316000003">
-        คณะวิทยาการจัดการ | สาขาธุรกิจค้าปลีกสมัยใหม่ (บธ.บ)              </option>
-                      <option value="15316000004">
-        คณะวิทยาการจัดการ | สาขาการจัดการโลจิสติกส์และซัพพลายเชน (บธ.บ)              </option>
-                      <option value="15316000006">
-        คณะวิทยาการจัดการ | สาขาการบริหารธุรกิจ กลุ่มวิชาการตลาด (บธ.บ)              </option>
-                      <option value="15316000007">
-        คณะวิทยาการจัดการ | สาขาการบริหารธุรกิจ กลุ่มวิชาการบริหารทรัพยากรมนุษย์ (บธ.บ)              </option>
-                      <option value="15316000008">
-        คณะวิทยาการจัดการ | สาขาการบัญชี (บช.บ.)              </option>
-                      <option value="15316000009">
-        คณะวิทยาการจัดการ | สาขาธุรกิจดิจิทัล (บธ.บ)              </option>
-                      <option value="15316000010">
-        คณะวิทยาการจัดการ | สาขาการสื่อสารดิจิทัลและมัลติมีเดีย (นศ.บ.)              </option>
-                      <option value="15316000011">
-        คณะวิทยาการจัดการ | สาขาการจัดการธุรกิจสมัยใหม่ (ต่อเนื่อง) (บธ.บ.)              </option>
-                      <option value="15317000001">
-        วิทยาลัยนวัตกรรมการจัดการ | สาขานวัตกรรมการจัดการธุรกิจการบิน (หลักสูตรนานาชาติ) (บธ.บ)              </option>
-                      <option value="15317000002">
-        วิทยาลัยนวัตกรรมการจัดการ | สาขาการจัดการการบริการและการโรงแรม (ศศ.บ.)              </option>
-                      <option value="15317000004">
-        วิทยาลัยนวัตกรรมการจัดการ | สาขาการจัดการนวัตกรรมการค้า (บธ.บ)              </option>
-                      <option value="15318000001">
-        คณะสาธารณสุขศาสตร์ | สาขาสาธารณสุขศาสตร์  (ส.บ.)              </option>
-                      <option value="15318000003">
-        คณะสาธารณสุขศาสตร์ | สาขาการจัดการสถานพยาบาล (ส.บ.)              </option>
-                      <option value="15318000004">
-        คณะสาธารณสุขศาสตร์ | สาขาอนามัยสิ่งแวดล้อม (วท.บ.)              </option>
-                      <option value="15318000005">
-        คณะสาธารณสุขศาสตร์ | สาขาสุขภาพและความงาม (วท.บ.)              </option>
-                      <option value="15341000001">
-        มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์  สระแก้ว | สาขาเกษตรศาสตร์  (วท.บ.)(เรียนที่สระแก้ว)              </option>
-                      <option value="15341000003">
-        มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์  สระแก้ว | สาขารัฐประศาสนศาสตร์ (รป.บ.)(เรียนที่สระแก้ว)              </option>
-                      <option value="15341000004">
-        มหาวิทยาลัยราชภัฏวไลยอลงกรณ์ ในพระบรมราชูปถัมภ์  สระแก้ว | สาขาการจัดการทั่วไป (บธ.บ.)(เรียนที่สระแก้ว)              </option>
-                    </select>
-    </label>      
-  </div>
-  <!-- ################################################################################################ -->        
-  <!--<label class="one_quarter first">
-  <span style="color: red"> *</span><br>
-  <label class="container">          <input type="radio" name="radio_card" value="1">
-    <span class="checkmark"></span>
-  </label>
-  <label class="container">          <input type="radio" name="radio_card" value="2">
-    <span class="checkmark"></span>
-  </label> 
-  </label>  
-  <label class="one_quarter">
-  <span style="color: red"> *</span><br>
-  <label class="container">          <input type="radio" name="radio_sex" value="1">
-    <span class="checkmark"></span>
-  </label>
-  <label class="container">          <input type="radio" name="radio_sex" value="2">
-    <span class="checkmark"></span>
-  </label> 
-  </label>-->
-    <label class="one_fifth first" >สัญชาติ<span style="color: red"> *</span><br> 
-      <select name="radio_card" type="VARCHAR" id="radio_card">
-        <option value="">เลือก...</option>
-        <option value="1">คนไทย</option>
-        <option value="2">ต่างชาติ</option>
-      </select>            
-    </label> 
-    <label class="one_fifth" >เพศ<span style="color: red"> *</span><br> 
-      <select name="radio_sex" type="VARCHAR" id="radio_sex">
-        <option value="">เลือก...</option>
-        <option value="1">ชาย</option>
-        <option value="2">หญิง</option>
-      </select>            
-    </label>                
-  <div class="form-input clear">     
-    <label class="one_fifth first" >คำนำหน้าชื่อ<span style="color: red"> * (ชื่อเต็ม)</span><br> 
-      <input name="prefix" type="VARCHAR" id="prefix" onKeyUp="javascript:inputDigits(this);">         
-    </label>              
-    <label class="one_fifth" >ชื่อ<span style="color: red"> *</span><br>
-      <input name="name_na" type="VARCHAR" id="name_na" onKeyUp="javascript:inputDigits(this);">
-    </label>
-    <label class="one_fifth" >นามสกุล<span style="color: red"> *</span><br>
-      <input name="surname_su" type="VARCHAR" id="surname_su" onKeyUp="javascript:inputDigits(this);">
-    </label>
-    <label class="one_fifth" >บัตรประชาชน<span style="color: red"> *</span><br>
-      <input name="cardid" type="VARCHAR" id="cardid" onkeyup="autoTab(this,1)">
-    </label>
-    <label class="one_fifth" >เบอร์โทรศัพท์<span style="color: red"> *</span><br>
-      <input name="telephone" type="VARCHAR" id="telephone" onkeyup="autoTab(this,2)">
-    </label>          
-  </div>                       
-  <!--##############################################################################################################-->
-  <div class="form-input clear">
-    <label class="one_quarter first" >ID Line (ถ้ามี)<span style="color: red"> </span><br>
-      <input name="line" type="VARCHAR" id="line" onKeyUp="javascript:inputDigits(this);">
-    </label>
-    <label class="one_quarter" >Facebook (ถ้ามี)<span style="color: red"> </span><br>
-      <input name="facebook" type="VARCHAR" id="facebook" onKeyUp="javascript:inputDigits(this);">
-    </label>  
-    <label class="one_quarter" >อีเมล<span style="color: red"> </span><br>
-      <input name="email" type="VARCHAR" id="email" onKeyUp="javascript:inputDigits(this);">
-    </label>                   
-  </div>
-  <div class="form-input clear">
-    <label class="one_fifth first" >วุฒิการศึกษา<span style="color: red"> *</span><br> 
-      <select name="educationan_sch" type="VARCHAR" id="educationan_sch" class="test" >
-        <option value="">เลือก...</option>
-        <option value="1">ม.6</option>
-        <option value="2">ปวช.</option>
-        <option value="3">ปวส.</option>
-        <option value="4">อนุปริญญา</option>
-        <option value="5">ปริญญาตรี</option>
-      </select>            
-    </label> 
-    <label class="one_half" >ชื่อสถานศึกษาเดิม<span style="color: red"> *</span><br>
-      <input name="place_sch" type="VARCHAR" id="place_sch" onKeyUp="javascript:inputDigits(this);">
-    </label>
-    <label class="one_fifth">จังหวัด<span style="color: red"> *</span><br>
-      <select name="province_sch" type="VARCHAR" id="province_sch" class="test">
-        <option value="">เลือก...</option>
-                        <option value="99">.ต่างชาติ/foreigner</option>
-                        <option value="64">กระบี่   </option>
-                        <option value="1">กรุงเทพมหานคร   </option>
-                        <option value="56">กาญจนบุรี   </option>
-                        <option value="34">กาฬสินธุ์   </option>
-                        <option value="49">กำแพงเพชร   </option>
-                        <option value="28">ขอนแก่น   </option>
-                        <option value="13">จันทบุรี   </option>
-                        <option value="15">ฉะเชิงเทรา   </option>
-                        <option value="11">ชลบุรี   </option>
-                        <option value="9">ชัยนาท   </option>
-                        <option value="25">ชัยภูมิ   </option>
-                        <option value="69">ชุมพร   </option>
-                        <option value="45">เชียงราย   </option>
-                        <option value="38">เชียงใหม่   </option>
-                        <option value="72">ตรัง   </option>
-                        <option value="14">ตราด   </option>
-                        <option value="50">ตาก   </option>
-                        <option value="17">นครนายก   </option>
-                        <option value="58">นครปฐม   </option>
-                        <option value="36">นครพนม   </option>
-                        <option value="19">นครราชสีมา   </option>
-                        <option value="63">นครศรีธรรมราช   </option>
-                        <option value="47">นครสวรรค์   </option>
-                        <option value="3">นนทบุรี   </option>
-                        <option value="76">นราธิวาส   </option>
-                        <option value="43">น่าน   </option>
-                        <option value="77">บึงกาฬ</option>
-                        <option value="20">บุรีรัมย์   </option>
-                        <option value="4">ปทุมธานี   </option>
-                        <option value="62">ประจวบคีรีขันธ์   </option>
-                        <option value="16">ปราจีนบุรี   </option>
-                        <option value="74">ปัตตานี   </option>
-                        <option value="5">พระนครศรีอยุธยา   </option>
-                        <option value="44">พะเยา   </option>
-                        <option value="65">พังงา   </option>
-                        <option value="73">พัทลุง   </option>
-                        <option value="53">พิจิตร   </option>
-                        <option value="52">พิษณุโลก   </option>
-                        <option value="61">เพชรบุรี   </option>
-                        <option value="54">เพชรบูรณ์   </option>
-                        <option value="42">แพร่   </option>
-                        <option value="66">ภูเก็ต   </option>
-                        <option value="32">มหาสารคาม   </option>
-                        <option value="37">มุกดาหาร   </option>
-                        <option value="46">แม่ฮ่องสอน   </option>
-                        <option value="0">ไม่ระบุ</option>
-                        <option value="24">ยโสธร   </option>
-                        <option value="75">ยะลา   </option>
-                        <option value="33">ร้อยเอ็ด   </option>
-                        <option value="68">ระนอง   </option>
-                        <option value="12">ระยอง   </option>
-                        <option value="55">ราชบุรี   </option>
-                        <option value="7">ลพบุรี   </option>
-                        <option value="40">ลำปาง   </option>
-                        <option value="39">ลำพูน   </option>
-                        <option value="30">เลย   </option>
-                        <option value="22">ศรีสะเกษ   </option>
-                        <option value="35">สกลนคร   </option>
-                        <option value="70">สงขลา   </option>
-                        <option value="71">สตูล   </option>
-                        <option value="2">สมุทรปราการ   </option>
-                        <option value="60">สมุทรสงคราม   </option>
-                        <option value="59">สมุทรสาคร   </option>
-                        <option value="18">สระแก้ว   </option>
-                        <option value="10">สระบุรี</option>
-                        <option value="8">สิงห์บุรี   </option>
-                        <option value="51">สุโขทัย   </option>
-                        <option value="57">สุพรรณบุรี   </option>
-                        <option value="67">สุราษฎร์ธานี   </option>
-                        <option value="21">สุรินทร์   </option>
-                        <option value="31">หนองคาย   </option>
-                        <option value="27">หนองบัวลำภู   </option>
-                        <option value="6">อ่างทอง   </option>
-                        <option value="26">อำนาจเจริญ   </option>
-                        <option value="29">อุดรธานี   </option>
-                        <option value="41">อุตรดิตถ์   </option>
-                        <option value="48">อุทัยธานี   </option>
-                        <option value="23">อุบลราชธานี   </option>
-                      </select>                    
-    </label>                                          
-  </div>                       
-  <div class="form-input clear">          
-    <label class="one_fifth" >สาขาวิชาที่เรียนจบ<span style="color: red"> *</span><br>
-      <input name="branch_sch" type="VARCHAR" id="branch_sch" onKeyUp="javascript:inputDigits(this);">
-    </label>
-    <label class="one_fifth" >ผลการเรียนเฉลี่ย (GPAX)<span style="color: red"> *</span><br>
-      <input name="grade_sch" type="VARCHAR" id="grade_sch" onKeyUp="javascript:inputDigits(this);">
-    </label>
-  </div>
-  <div class="form-input clear"> 
-  <!--<label class="one_quarter first">
-  <span style="color: red"> *</span><br>
-  <label class="container">          <input type="radio" name="bursary" value="1">
-    <span class="checkmark"></span>
-  </label>
-  <label class="container">          <input type="radio" name="bursary" value="0">
-    <span class="checkmark"></span>
-  </label> 
-  </label>-->
-    <label class="one_fifth" >มีความต้องการกู้ยืมเพื่อการศึกษา<span style="color: red"> *</span><br> 
-      <select name="bursary" type="VARCHAR" id="bursary">
-        <option value="">เลือก...</option>
-        <option value="1">ต้องการ</option>
-        <option value="0">ไม่ต้องการ</option>
-      </select>            
-    </label>         
-  </div> 
-  <div class="form-input clear">
-    <label class="one_fifth first" ><span class="required">เอกสารแนบ <font color="red">(แฟ้มสะสมงาน)</font></span><br>
-      <input name="image_stu" type="file" id="image_stu">
-    </label>          
-  </div>                                                        
-<!--####################################################################################################################-->
-<div align="center">
-<input class="button medium green rnd8" type="submit" name="Submit" value="ยืนยัน">
-&nbsp;
-<input class="button medium red rnd8" name="Reset" type="reset" id="Reset" value="ยกเลิก"onclick="window.location.href='Homepages.php'">
-</div>
-</form>
-</div>
-<!-- ################################################################################################ -->
-<div class="clear">&nbsp;</div>
-</div>
-</div>
-<!-- Footer -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>
-<script>window.jQuery || document.write('<script src="../layout/scripts/jquery-latest.min.js"><\/script>\
-<script src="../layout/scripts/jquery-ui.min.js"><\/script>')</script>
-<script>jQuery(document).ready(function($){ $('img').removeAttr('width height'); });</script>
-<script src="../layout/scripts/jquery-mobilemenu.min.js"></script>
-<script src="../layout/scripts/custom.js"></script>
-</body>
-</html>    
-<!--############################################### chkcardid ##################################################-->      
-      
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">หน้าหลัก</a></li>
+        <li class="breadcrumb-item"><a href="#">หมวดหมู่ของสินค้า</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ชื่อสินค้า</li>
+      </ol>
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="true"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de5aee92-ed49-4bf7-85c3-7aa35b7cd511/%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%82%E0%B8%A3%E0%B9%89%E0%B8%94%E0%B9%80%E0%B8%A3%E0%B8%8B%E0%B8%8B%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%9C%E0%B8%B9%E0%B9%89-alphafly-next-2-DcWrKF.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://cf.shopee.co.th/file/47f7f24bdc8fcce446b1c6971c3dbbd2"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <h5>Nike <span class="badge bg-primary">ใหม่</span></h5>
+        <div class="row">
+          <div class="col-lg-10">
+            <i class="bi-star-fill"></i>
+            <i class="bi-star-fill"></i>
+            <i class="bi-star-fill"></i>
+            <i class="bi-star-fill"></i>
+            <i class="bi-star-fill"></i>
+            5.0
+          </div>
+          <div class="col-lg-2">
+            <i class="bi bi-share-fill"></i>
+            <i class="bi bi-heart"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">หมวดหมู่สินค้า</a></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-lg-2">ฟรีค่าส่ง</div>
+        </div>
+
+        <hr />
+        <div class="row">
+          <div class="col-lg-10">
+            <h1>฿100.00</h1>
+          </div>
+          <div class="col-lg-2">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">ชื่อร้านค้า</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        จำนวน
+        <div class="input-group mb-3">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon1"
+          >
+            -
+          </button>
+          <span class="input-group-text">1</span>
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon1"
+          >
+            +
+          </button>
+        </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-secondary" type="button">
+            ใส่ตระกร้าสินค้า่
+          </button>
+        </div>
+      </div>
+    </div>
+    <h1>Product Details</h1>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                รายละเอียด
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                ถ้าได้ลองเดินสัก 2-3 ก้าวด้วย Nike Air Zoom Alphafly NEXT% 2
+                คุณจะมองรองเท้าคู่เก่าที่เคยใส่ลงแข่งไม่เหมือนเดิมอีกต่อไป
+                รองเท้าที่เร็วดั่งจรวดคู่นี้รังสรรค์มาเพื่อช่วยให้คุณพิชิต PR
+                ได้ โดยไม่ทิ้งคุณสมบัติพื้นฐานของการวิ่งเก็บระยะทาง
+                ระบบซัพพอร์ตที่หนาและมีน้ำหนักเบาผสานความสบายและความเร็วเข้าด้วยกันจนเกิดเป็นที่สุดแห่งรองเท้าวิ่งที่มีสองคุณสมบัติในตัว
+                พร้อมเพลิดเพลินไปกับการส่งแรงกลับที่ดีที่สุดในบรรดารองเท้าวิ่งแข่งทั้งหมดของเราในระหว่างเอาชนะ
+                PB ของคุณ
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
