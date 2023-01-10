@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
   </head>
-  <body>
+  <body class="container-fluid">
     <!-- As a nav -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
@@ -171,7 +171,7 @@
         </div>
       </div>
       <!-- badge -->
-      <div class="col mb-3">
+      <div class="col mb-5">
         <h3>
           ชื่อสินค้า<span class="badge rounded-pill text-bg-info mb-3"
             >ใหม่</span
@@ -179,7 +179,7 @@
         </h3>
         <!-- star -->
         <div class="row">
-          <div class="col-lg-8 mb-3">
+          <div class="col-lg-8 mb-5">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -209,9 +209,10 @@
           <div class="row">
             <div class="col-lg-8">
               <div
-                class="btn-group mb-5"
+                class="btn-group mb-3"
                 role="group"
-                aria-label="Basic outlined example">
+                aria-label="Basic outlined example"
+              >
                 จำนวน
 
                 <button
@@ -250,8 +251,128 @@
 
       <!--acccodian-->
       <div class="row">
-        <div class="col lg-6">ffffffffff</div>
-        <div class="col lg-6">ssssss</div>
+        <div class="col lg-9">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  รายละเอียด
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="col">
+                    <div class="py-1 my-1 bg-warning container">
+                      <h3>รายละเอียดสินค้า</h3>
+                    </div>
+                    พฤกษานกแก้ว สบู่ก้อน กลิ่นพฤกษานานาพรรณ 70 ก. แพ็ค 4
+                    อาบสะอาด ผิวสดชื่นด้วย พฤกษานกแก้ว สบู่ก้อน
+                    ผลิตภัณฑ์สบู่ทำความสะอาดผิวกายคุณภาพเยี่ยมจากแบรนด์พฤกษานกแก้ว
+                    ที่อยู่คู่กับคนไทยมาอย่างยาวนาน ผสานความหอมโดดเด่นของดอกไม้
+                    และพฤกษาไทย สูตรลับเฉพาะ มอบทั้งความสะอาดและความสดชื่น
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  คุณสมบัตสินค้า
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="col">
+                    <div class="py-1 my-1 bg-warning container">
+                      <h3>คุณสมบัตรสินค้า</h3>
+                    </div>
+                    <li>ให้คุณรู้สึกสดชื่นจากธรรมชาติ</li>
+                    <li>กลิ่นหอมดอกไม้</li>
+                    <li>คุณค่าสมุนไพรไทยที่เป็นสูตรลับเฉพาะของนกแก้ว</li>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  ตารางค่าจัดส่ง
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">รายการ</th>
+                        <th scope="col">น้ำหนัก</th>
+                        <th scope="col">ราคา</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>5 กิโลกรัม</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>7 กิโลกรัม</td>
+                        <td>280</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>12 กิโลกรัม</td>
+                        <td>380</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col lg-3">ssssss</div>
       </div>
     </div>
 
